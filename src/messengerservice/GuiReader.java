@@ -11,6 +11,9 @@ import javax.swing.JOptionPane;
  *
  * @author Lane Schultz
  */
+
+//Implements the Reader interface and uses a sting text.
+
 public class GuiReader implements Reader{
     
     @Override
