@@ -9,11 +9,8 @@ package messengerservice;
  *
  * @author Lane Schultz
  */
-
-//This is the template for my message classes.  Every one of them will will
-//return a string.
-
 public interface Messageable {
-    public void setMessage(String message);
-    public String getMessage(); 
+   
+   public String getMessage();
+   public void setMessage(String message);
 }

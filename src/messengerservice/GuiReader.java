@@ -14,10 +14,10 @@ import javax.swing.JOptionPane;
 
 //Implements the Reader interface and uses a sting text.
 
-public class GuiReader implements Reader{
+public class GuiReader implements TextReader{
     
     @Override
-    public String setMessage() {
+    public String getMessage() {
         String message = JOptionPane.showInputDialog("Enter Your Text: ");
         return message;
     } 

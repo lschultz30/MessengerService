@@ -11,10 +11,10 @@ import javax.swing.JOptionPane;
  *
  * @author Lane Schultz
  */
-public class GuiWriter implements Writer{
+public class GuiWriter implements TextWriter{
      
-    @Override
-    public void displayMessage(String message) {
+@Override
+    public void deliverMessage(String message) {
             JOptionPane.showMessageDialog(null, message);
     }
 }

@@ -5,41 +5,46 @@ package messengerservice;
  * @author Lane Schultz
  */
 public class MessengerService {
-    private Messageable messenger; //Variable to hold a message strategy
-    private Writer writer; //Variable to hold a writer 
-    private Reader reader; //Variable to hold a message reader
+//    private Messageable messenger; //Variable to hold a message strategy
+    private TextWriter writer; //Variable to hold a writer 
+    private TextReader reader; //Variable to hold a message reader
     
     //Constructors 
     public MessengerService(){
         
     }
     
-    public MessengerService(Messageable msg, Writer writer, Reader reader) {
-        this.setMessenger(msg);
+  public MessengerService(TextWriter writer, TextReader reader) {
+//        this.setMessenger(msg);
         this.setWriter(writer);
         this.setReader(reader);
         
     }
+  
+  public void deliverMessage() {
+      String message = reader.getMessage();
+      writer.deliverMessage(message);
+  }
 
-    //Setters
-    public void setMessenger(Messageable msg) {
-        this.messenger = msg;
-    }
+  //Setters
+//    public void setMessenger(Messageable msg) {
+//        this.messenger = msg;
+//    }
     
-    public void setWriter(Writer writer){
+    public void setWriter(TextWriter writer){
         this.writer=writer;
     }
     
-    public void setReader(Reader reader){
+    public void setReader(TextReader reader){
         this.reader = reader;
     }
     
-    public void setMessage(){
-        messenger.setMessage(reader.setMessage());
-    }
+//    public void setMessage(){
+//        messenger.setMessage(reader.getMessage());
+//    }
 
     //Gets the message
-    public void getMessage(){
-        writer.displayMessage(messenger.getMessage());
-    }
+//    public void getMessage(){
+//        writer.deliverMessage(messenger.getMessage());
+//    }
 }

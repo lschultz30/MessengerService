@@ -9,6 +9,6 @@ package messengerservice;
  *
  * @author Lane Schultz
  */
-public interface Writer {
-    void displayMessage(String message);
+public interface TextWriter {
+    public abstract void deliverMessage(String message);
 }
